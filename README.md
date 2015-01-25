@@ -1,4 +1,4 @@
-Coursera Developing Data Products presentation
+# Coursera Developing Data Products presentation
 
 This presentation is part of the Coursera Developing Data Products project.
 

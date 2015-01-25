@@ -8,7 +8,7 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
----
+--- bg:#EDE0CF
 
 ## Residual Life Expectancy
  
@@ -23,9 +23,9 @@ show that the global average life expectancy at birth
 has risen from 64 years in 1990 to 70 years in 2012. [2]
 As individuals, therefore, it is becoming increasingly important 
 to understand how much longer we can be expected to live and the 
-various lifestyle factors that can influence our longevity. 
+various lifestyle factors that can influence our lifespan. 
 
-For this project, we have developed a Shiny application that 
+For this project, we have developed a convenient Shiny application that 
 can predict people's residual life expectancy (RLE) based on where 
 they live, their sex, and their age. Optionally, the application 
 can also provide a more customized response based on key personal 
@@ -36,10 +36,10 @@ lifestyle risk factors as identified by a recent cohort study. [3]
 ^[2] ^http://apps.who.int/iris/bitstream/10665/112738/1/9789240692671_eng.pdf?ua=1<br>
 ^[3] ^http://www.biomedcentral.com/1741-7015/12/59
 
----
+--- bg:#EDE0CF
 
 To develop the application, the relevant 2012 
-data was downloaded from the World Health Organization's 
+data was downloaded from the World Health Organization's (WHO's) 
 data repository. [4] From it, a tidy data frame was created
 and saved. [5]
 
@@ -65,8 +65,34 @@ saveRDS(ev_df, file = "./ddp_project/data/ev.rds")
 ^[4] ^http://apps.who.int/gho/data/?theme=main<br>
 ^[5] ^http://github.com/dhashman/developing_data_products/blob/master/ev.R
 
----
+--- bg:#EDE0CF
 
-<iframe src=' assets/fig/plot1-1.html ' scrolling='no' frameBorder='0' seamless class='rChart dimple ' id=iframe- chart3acc6be854c3 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+As can be seen by the graph below, people's base RLE 
+varies depending on what region of the world they live in, 
+their sex, and their current age. Click on the interactive 
+graph to see specific RLE values by region, sex, and age group.  
+<br>
 
-```
+<iframe src=' assets/fig/plot1-1.html ' scrolling='no' frameBorder='0' seamless class='rChart dimple ' id=iframe- chart3acc220022c3 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+
+--- bg:#EDE0CF
+
+<style type="text/css">
+img {     
+  max-height: 560px;     
+  max-width: 964px; 
+}
+</style>
+
+Key personal lifestyle risk factors that can influence your 
+RLE include whether you smoke or have smoked, your body 
+mass index (BMI), and, on average, how much alcohol you drink 
+and how much processed/red meat you eat on a daily basis. 
+The web application looks like:  
+<br>
+
+<img src="RLE_application.JPG">
+
+Go to https://dhashman.shinyapps.io/ddp_project/ and 
+try it! It may help you to live longer.
+
