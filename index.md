@@ -92,7 +92,7 @@ and how much processed/red meat you eat on a daily basis.
 The web application looks like:  
 <br>
 
-<img src="RLE_application.JPG">
+<img src="RLE_application.jpg">
 
 Go to https://dhashman.shinyapps.io/ddp_project/ and 
 try it! It may help you to live longer.
