@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Residual Life Expectancy</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Residual Life Expectancy">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Residual Life Expectancy</h1>
+    <h2>How much longer am I expected to live?</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Residual Life Expectancy</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The world&#39;s population is continuing to age. According to the 
+United Nations&#39; Department of Economic and Social Affairs, 
+the global share of people aged 60 years or more increased from 
+9.2% in 1990 to 11.7% in 2013 and is expected to grow to 21.1% 
+by 2050. [1]</p>
+
+<p>Statistics compiled by the World Heath Organization 
+show that the global average life expectancy at birth 
+has risen from 64 years in 1990 to 70 years in 2012. [2]
+As individuals, therefore, it is becoming increasingly important 
+to understand how much longer we can be expected to live and the 
+various lifestyle factors that can influence our longevity. </p>
+
+<p>For this project, we have developed a Shiny application that 
+can predict people&#39;s residual life expectancy (RLE) based on where 
+they live, their sex, and their age. Optionally, the application 
+can also provide a more customized response based on key personal 
+lifestyle risk factors as identified by a recent cohort study. [3]</p>
+
+<p><sup>[1]</sup> <sup><a href="http://www.un.org/en/development/desa/population/publications/pdf/ageing/WorldPopulationAgeing2013.pdf">http://www.un.org/en/development/desa/population/publications/pdf/ageing/WorldPopulationAgeing2013.pdf</a><br></sup>
+<sup>[2]</sup> <sup><a href="http://apps.who.int/iris/bitstream/10665/112738/1/9789240692671_eng.pdf?ua=1">http://apps.who.int/iris/bitstream/10665/112738/1/9789240692671_eng.pdf?ua=1</a><br></sup>
+<sup>[3]</sup> <sup><a href="http://www.biomedcentral.com/1741-7015/12/59">http://www.biomedcentral.com/1741-7015/12/59</a></sup></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <article data-timings="">
+    <p>To develop the application, the relevant 2012 
+data was downloaded from the World Health Organization&#39;s 
+data repository. [4] From it, a tidy data frame was created
+and saved. [5]</p>
+
+<pre><code class="r">library(dplyr)
+regions = c(&quot;AFR&quot;, &quot;EMR&quot;, &quot;EUR&quot;, &quot;AMR&quot;, &quot;SEAR&quot;, &quot;WPR&quot;)
+prefix &lt;- &quot;http://apps.who.int/gho/athena/data/data-text.csv?target=GHO/&quot;
+ev &lt;- &quot;LIFE_0000000035&quot;
+suffix &lt;- &quot;&amp;profile=text&amp;filter=COUNTRY:-;YEAR:2012;SEX:FMLE;SEX:MLE;REGION:&quot;
+ev_df &lt;- do.call(rbind, lapply(regions, function(region) {
+        url &lt;- paste(prefix, ev, suffix, region, sep=&quot;&quot;) 
+        data &lt;- distinct(select(read.csv(url), WHO.region, Sex, Age.Group, Numeric))
+        return(data)}))
+ages &lt;- c(&quot;&lt;1&quot;, &quot;1-4&quot;, &quot;5-9&quot;, &quot;10-14&quot;, &quot;15-19&quot;, &quot;20-24&quot;, &quot;25-29&quot;, &quot;30-34&quot;, 
+    &quot;35-39&quot;, &quot;40-44&quot;, &quot;45-49&quot;, &quot;50-54&quot;, &quot;55-59&quot;, &quot;60-64&quot;, &quot;65-69&quot;, &quot;70-74&quot;, 
+    &quot;75-79&quot;, &quot;80-84&quot;, &quot;85-89&quot;, &quot;90-94&quot;, &quot;95-99&quot;, &quot;100+&quot;)
+ev_df$Age.Group &lt;- factor(ev_df$Age.Group, levels=ages)
+ev_df &lt;- arrange(ev_df, WHO.region, Sex, Age.Group)
+saveRDS(ev_df, file = &quot;./ddp_project/data/ev.rds&quot;)
+</code></pre>
+
+<p><sup>[4]</sup> <sup><a href="http://apps.who.int/gho/data/?theme=main">http://apps.who.int/gho/data/?theme=main</a><br></sup>
+<sup>[5]</sup> <sup><a href="http://github.com/dhashman/developing_data_products/blob/master/ev.R">http://github.com/dhashman/developing_data_products/blob/master/ev.R</a></sup></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <article data-timings="">
+    <p><iframe src=' assets/fig/plot1-1.html ' scrolling='no' frameBorder='0' seamless class='rChart dimple ' id=iframe- chart3acc6be854c3 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style></p>
+
+<pre><code></code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Residual Life Expectancy'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title=''>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title=''>
+         3
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

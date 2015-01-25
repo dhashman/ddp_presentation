@@ -43,7 +43,8 @@ data was downloaded from the World Health Organization's
 data repository. [4] From it, a tidy data frame was created
 and saved. [5]
 
-```{r eval = F, echo = T}
+
+```r
 library(dplyr)
 regions = c("AFR", "EMR", "EUR", "AMR", "SEAR", "WPR")
 prefix <- "http://apps.who.int/gho/athena/data/data-text.csv?target=GHO/"
@@ -66,39 +67,6 @@ saveRDS(ev_df, file = "./ddp_project/data/ev.rds")
 
 ---
 
-```{r plot1, results = 'asis', comment = NA, message = F, echo = F}
-library(rCharts)
-ev_df <- readRDS("data/ev.rds")
-plt1 <- dPlot(
-  Numeric ~ Age.Group,
-  groups = c("Sex", "WHO.region"),
-  data = ev_df,
-  type = "line"
-)
-plt1$xAxis(type = "addCategoryAxis")
-plt1$yAxis(type = "addMeasureAxis")
-plt1$legend(
-  x = 200,
-  y = 10,
-  width = 600,
-  height = 20,
-  horizontalAlign = "right"
-)
-plt1$setTemplate(afterScript = "
-  <script>
-    myChart.draw()
-    myChart.axes[0].titleShape.text('Age Group')
-    myChart.axes[1].titleShape.text('RLE (years)')
-    myChart.svg.append('text')
-        .attr('x', 0)
-        .attr('y', 20)
-        .text('RLE by Age Group, Region, and Sex')
-        .style('text-anchor','beginning')
-        .style('font-size', '90%')
-        .style('font-family','sans-serif')
-  </script>               
-")
-plt1
-```
+<iframe src=' assets/fig/plot1-1.html ' scrolling='no' frameBorder='0' seamless class='rChart dimple ' id=iframe- chart3acc6be854c3 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 ```

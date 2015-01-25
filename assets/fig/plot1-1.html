@@ -1,0 +1,223 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://dimplejs.org/dist/dimple.v1.1.4.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chart3acc6be854c3' class = 'rChart dimple'></div>    
+    <script type="text/javascript">
+  var opts = {
+ "dom": "chart3acc6be854c3",
+"width":    800,
+"height":    400,
+"xAxis": {
+ "type": "addCategoryAxis",
+"showPercent": false 
+},
+"yAxis": {
+ "type": "addMeasureAxis",
+"showPercent": false 
+},
+"zAxis": [],
+"colorAxis": [],
+"defaultColors": [],
+"layers": [],
+"legend": {
+ "x":    200,
+"y":     10,
+"width":    600,
+"height":     20,
+"horizontalAlign": "right" 
+},
+"x": "Age.Group",
+"y": "Numeric",
+"groups": [ "Sex", "WHO.region" ],
+"type": "line",
+"id": "chart3acc6be854c3" 
+},
+    data = [{"WHO.region":"Africa","Sex":"Female","Age.Group":"<1","Numeric":59},{"WHO.region":"Africa","Sex":"Female","Age.Group":"1-4","Numeric":62},{"WHO.region":"Africa","Sex":"Female","Age.Group":"5-9","Numeric":60},{"WHO.region":"Africa","Sex":"Female","Age.Group":"10-14","Numeric":56},{"WHO.region":"Africa","Sex":"Female","Age.Group":"15-19","Numeric":52},{"WHO.region":"Africa","Sex":"Female","Age.Group":"20-24","Numeric":47},{"WHO.region":"Africa","Sex":"Female","Age.Group":"25-29","Numeric":43},{"WHO.region":"Africa","Sex":"Female","Age.Group":"30-34","Numeric":39},{"WHO.region":"Africa","Sex":"Female","Age.Group":"35-39","Numeric":36},{"WHO.region":"Africa","Sex":"Female","Age.Group":"40-44","Numeric":32},{"WHO.region":"Africa","Sex":"Female","Age.Group":"45-49","Numeric":28},{"WHO.region":"Africa","Sex":"Female","Age.Group":"50-54","Numeric":25},{"WHO.region":"Africa","Sex":"Female","Age.Group":"55-59","Numeric":21},{"WHO.region":"Africa","Sex":"Female","Age.Group":"60-64","Numeric":17},{"WHO.region":"Africa","Sex":"Female","Age.Group":"65-69","Numeric":14},{"WHO.region":"Africa","Sex":"Female","Age.Group":"70-74","Numeric":11},{"WHO.region":"Africa","Sex":"Female","Age.Group":"75-79","Numeric":8},{"WHO.region":"Africa","Sex":"Female","Age.Group":"80-84","Numeric":6},{"WHO.region":"Africa","Sex":"Female","Age.Group":"85-89","Numeric":4},{"WHO.region":"Africa","Sex":"Female","Age.Group":"90-94","Numeric":3},{"WHO.region":"Africa","Sex":"Female","Age.Group":"95-99","Numeric":2},{"WHO.region":"Africa","Sex":"Female","Age.Group":"100+","Numeric":2},{"WHO.region":"Africa","Sex":"Male","Age.Group":"<1","Numeric":56},{"WHO.region":"Africa","Sex":"Male","Age.Group":"1-4","Numeric":59},{"WHO.region":"Africa","Sex":"Male","Age.Group":"5-9","Numeric":58},{"WHO.region":"Africa","Sex":"Male","Age.Group":"10-14","Numeric":54},{"WHO.region":"Africa","Sex":"Male","Age.Group":"15-19","Numeric":49},{"WHO.region":"Africa","Sex":"Male","Age.Group":"20-24","Numeric":45},{"WHO.region":"Africa","Sex":"Male","Age.Group":"25-29","Numeric":41},{"WHO.region":"Africa","Sex":"Male","Age.Group":"30-34","Numeric":37},{"WHO.region":"Africa","Sex":"Male","Age.Group":"35-39","Numeric":33},{"WHO.region":"Africa","Sex":"Male","Age.Group":"40-44","Numeric":30},{"WHO.region":"Africa","Sex":"Male","Age.Group":"45-49","Numeric":26},{"WHO.region":"Africa","Sex":"Male","Age.Group":"50-54","Numeric":23},{"WHO.region":"Africa","Sex":"Male","Age.Group":"55-59","Numeric":19},{"WHO.region":"Africa","Sex":"Male","Age.Group":"60-64","Numeric":16},{"WHO.region":"Africa","Sex":"Male","Age.Group":"65-69","Numeric":13},{"WHO.region":"Africa","Sex":"Male","Age.Group":"70-74","Numeric":10},{"WHO.region":"Africa","Sex":"Male","Age.Group":"75-79","Numeric":7},{"WHO.region":"Africa","Sex":"Male","Age.Group":"80-84","Numeric":5},{"WHO.region":"Africa","Sex":"Male","Age.Group":"85-89","Numeric":4},{"WHO.region":"Africa","Sex":"Male","Age.Group":"90-94","Numeric":3},{"WHO.region":"Africa","Sex":"Male","Age.Group":"95-99","Numeric":2},{"WHO.region":"Africa","Sex":"Male","Age.Group":"100+","Numeric":2},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"<1","Numeric":70},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"1-4","Numeric":72},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"5-9","Numeric":69},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"10-14","Numeric":64},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"15-19","Numeric":59},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"20-24","Numeric":55},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"25-29","Numeric":50},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"30-34","Numeric":45},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"35-39","Numeric":41},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"40-44","Numeric":36},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"45-49","Numeric":32},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"50-54","Numeric":27},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"55-59","Numeric":23},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"60-64","Numeric":19},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"65-69","Numeric":15},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"70-74","Numeric":12},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"75-79","Numeric":9},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"80-84","Numeric":7},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"85-89","Numeric":5},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"90-94","Numeric":4},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"95-99","Numeric":3},{"WHO.region":"Eastern Mediterranean","Sex":"Female","Age.Group":"100+","Numeric":2},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"<1","Numeric":66},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"1-4","Numeric":68},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"5-9","Numeric":65},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"10-14","Numeric":61},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"15-19","Numeric":56},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"20-24","Numeric":51},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"25-29","Numeric":47},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"30-34","Numeric":42},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"35-39","Numeric":38},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"40-44","Numeric":34},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"45-49","Numeric":29},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"50-54","Numeric":25},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"55-59","Numeric":21},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"60-64","Numeric":17},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"65-69","Numeric":14},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"70-74","Numeric":11},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"75-79","Numeric":8},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"80-84","Numeric":6},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"85-89","Numeric":4},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"90-94","Numeric":3},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"95-99","Numeric":2},{"WHO.region":"Eastern Mediterranean","Sex":"Male","Age.Group":"100+","Numeric":2},{"WHO.region":"Europe","Sex":"Female","Age.Group":"<1","Numeric":80},{"WHO.region":"Europe","Sex":"Female","Age.Group":"1-4","Numeric":79},{"WHO.region":"Europe","Sex":"Female","Age.Group":"5-9","Numeric":75},{"WHO.region":"Europe","Sex":"Female","Age.Group":"10-14","Numeric":71},{"WHO.region":"Europe","Sex":"Female","Age.Group":"15-19","Numeric":66},{"WHO.region":"Europe","Sex":"Female","Age.Group":"20-24","Numeric":61},{"WHO.region":"Europe","Sex":"Female","Age.Group":"25-29","Numeric":56},{"WHO.region":"Europe","Sex":"Female","Age.Group":"30-34","Numeric":51},{"WHO.region":"Europe","Sex":"Female","Age.Group":"35-39","Numeric":46},{"WHO.region":"Europe","Sex":"Female","Age.Group":"40-44","Numeric":42},{"WHO.region":"Europe","Sex":"Female","Age.Group":"45-49","Numeric":37},{"WHO.region":"Europe","Sex":"Female","Age.Group":"50-54","Numeric":32},{"WHO.region":"Europe","Sex":"Female","Age.Group":"55-59","Numeric":28},{"WHO.region":"Europe","Sex":"Female","Age.Group":"60-64","Numeric":23},{"WHO.region":"Europe","Sex":"Female","Age.Group":"65-69","Numeric":19},{"WHO.region":"Europe","Sex":"Female","Age.Group":"70-74","Numeric":15},{"WHO.region":"Europe","Sex":"Female","Age.Group":"75-79","Numeric":12},{"WHO.region":"Europe","Sex":"Female","Age.Group":"80-84","Numeric":9},{"WHO.region":"Europe","Sex":"Female","Age.Group":"85-89","Numeric":6},{"WHO.region":"Europe","Sex":"Female","Age.Group":"90-94","Numeric":5},{"WHO.region":"Europe","Sex":"Female","Age.Group":"95-99","Numeric":3},{"WHO.region":"Europe","Sex":"Female","Age.Group":"100+","Numeric":2},{"WHO.region":"Europe","Sex":"Male","Age.Group":"<1","Numeric":72},{"WHO.region":"Europe","Sex":"Male","Age.Group":"1-4","Numeric":72},{"WHO.region":"Europe","Sex":"Male","Age.Group":"5-9","Numeric":68},{"WHO.region":"Europe","Sex":"Male","Age.Group":"10-14","Numeric":63},{"WHO.region":"Europe","Sex":"Male","Age.Group":"15-19","Numeric":59},{"WHO.region":"Europe","Sex":"Male","Age.Group":"20-24","Numeric":54},{"WHO.region":"Europe","Sex":"Male","Age.Group":"25-29","Numeric":49},{"WHO.region":"Europe","Sex":"Male","Age.Group":"30-34","Numeric":44},{"WHO.region":"Europe","Sex":"Male","Age.Group":"35-39","Numeric":40},{"WHO.region":"Europe","Sex":"Male","Age.Group":"40-44","Numeric":35},{"WHO.region":"Europe","Sex":"Male","Age.Group":"45-49","Numeric":31},{"WHO.region":"Europe","Sex":"Male","Age.Group":"50-54","Numeric":27},{"WHO.region":"Europe","Sex":"Male","Age.Group":"55-59","Numeric":23},{"WHO.region":"Europe","Sex":"Male","Age.Group":"60-64","Numeric":19},{"WHO.region":"Europe","Sex":"Male","Age.Group":"65-69","Numeric":16},{"WHO.region":"Europe","Sex":"Male","Age.Group":"70-74","Numeric":13},{"WHO.region":"Europe","Sex":"Male","Age.Group":"75-79","Numeric":10},{"WHO.region":"Europe","Sex":"Male","Age.Group":"80-84","Numeric":8},{"WHO.region":"Europe","Sex":"Male","Age.Group":"85-89","Numeric":6},{"WHO.region":"Europe","Sex":"Male","Age.Group":"90-94","Numeric":4},{"WHO.region":"Europe","Sex":"Male","Age.Group":"95-99","Numeric":3},{"WHO.region":"Europe","Sex":"Male","Age.Group":"100+","Numeric":2},{"WHO.region":"Americas","Sex":"Female","Age.Group":"<1","Numeric":79},{"WHO.region":"Americas","Sex":"Female","Age.Group":"1-4","Numeric":79},{"WHO.region":"Americas","Sex":"Female","Age.Group":"5-9","Numeric":75},{"WHO.region":"Americas","Sex":"Female","Age.Group":"10-14","Numeric":70},{"WHO.region":"Americas","Sex":"Female","Age.Group":"15-19","Numeric":66},{"WHO.region":"Americas","Sex":"Female","Age.Group":"20-24","Numeric":61},{"WHO.region":"Americas","Sex":"Female","Age.Group":"25-29","Numeric":56},{"WHO.region":"Americas","Sex":"Female","Age.Group":"30-34","Numeric":51},{"WHO.region":"Americas","Sex":"Female","Age.Group":"35-39","Numeric":46},{"WHO.region":"Americas","Sex":"Female","Age.Group":"40-44","Numeric":42},{"WHO.region":"Americas","Sex":"Female","Age.Group":"45-49","Numeric":37},{"WHO.region":"Americas","Sex":"Female","Age.Group":"50-54","Numeric":32},{"WHO.region":"Americas","Sex":"Female","Age.Group":"55-59","Numeric":28},{"WHO.region":"Americas","Sex":"Female","Age.Group":"60-64","Numeric":24},{"WHO.region":"Americas","Sex":"Female","Age.Group":"65-69","Numeric":20},{"WHO.region":"Americas","Sex":"Female","Age.Group":"70-74","Numeric":16},{"WHO.region":"Americas","Sex":"Female","Age.Group":"75-79","Numeric":13},{"WHO.region":"Americas","Sex":"Female","Age.Group":"80-84","Numeric":10},{"WHO.region":"Americas","Sex":"Female","Age.Group":"85-89","Numeric":7},{"WHO.region":"Americas","Sex":"Female","Age.Group":"90-94","Numeric":5},{"WHO.region":"Americas","Sex":"Female","Age.Group":"95-99","Numeric":4},{"WHO.region":"Americas","Sex":"Female","Age.Group":"100+","Numeric":3},{"WHO.region":"Americas","Sex":"Male","Age.Group":"<1","Numeric":74},{"WHO.region":"Americas","Sex":"Male","Age.Group":"1-4","Numeric":74},{"WHO.region":"Americas","Sex":"Male","Age.Group":"5-9","Numeric":70},{"WHO.region":"Americas","Sex":"Male","Age.Group":"10-14","Numeric":65},{"WHO.region":"Americas","Sex":"Male","Age.Group":"15-19","Numeric":60},{"WHO.region":"Americas","Sex":"Male","Age.Group":"20-24","Numeric":55},{"WHO.region":"Americas","Sex":"Male","Age.Group":"25-29","Numeric":51},{"WHO.region":"Americas","Sex":"Male","Age.Group":"30-34","Numeric":46},{"WHO.region":"Americas","Sex":"Male","Age.Group":"35-39","Numeric":42},{"WHO.region":"Americas","Sex":"Male","Age.Group":"40-44","Numeric":37},{"WHO.region":"Americas","Sex":"Male","Age.Group":"45-49","Numeric":33},{"WHO.region":"Americas","Sex":"Male","Age.Group":"50-54","Numeric":29},{"WHO.region":"Americas","Sex":"Male","Age.Group":"55-59","Numeric":25},{"WHO.region":"Americas","Sex":"Male","Age.Group":"60-64","Numeric":21},{"WHO.region":"Americas","Sex":"Male","Age.Group":"65-69","Numeric":17},{"WHO.region":"Americas","Sex":"Male","Age.Group":"70-74","Numeric":14},{"WHO.region":"Americas","Sex":"Male","Age.Group":"75-79","Numeric":11},{"WHO.region":"Americas","Sex":"Male","Age.Group":"80-84","Numeric":8},{"WHO.region":"Americas","Sex":"Male","Age.Group":"85-89","Numeric":6},{"WHO.region":"Americas","Sex":"Male","Age.Group":"90-94","Numeric":4},{"WHO.region":"Americas","Sex":"Male","Age.Group":"95-99","Numeric":3},{"WHO.region":"Americas","Sex":"Male","Age.Group":"100+","Numeric":3},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"<1","Numeric":69},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"1-4","Numeric":71},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"5-9","Numeric":68},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"10-14","Numeric":63},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"15-19","Numeric":59},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"20-24","Numeric":54},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"25-29","Numeric":49},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"30-34","Numeric":45},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"35-39","Numeric":40},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"40-44","Numeric":36},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"45-49","Numeric":31},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"50-54","Numeric":27},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"55-59","Numeric":22},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"60-64","Numeric":18},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"65-69","Numeric":15},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"70-74","Numeric":12},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"75-79","Numeric":9},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"80-84","Numeric":7},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"85-89","Numeric":5},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"90-94","Numeric":4},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"95-99","Numeric":3},{"WHO.region":"South-East Asia","Sex":"Female","Age.Group":"100+","Numeric":3},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"<1","Numeric":66},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"1-4","Numeric":67},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"5-9","Numeric":64},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"10-14","Numeric":59},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"15-19","Numeric":55},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"20-24","Numeric":50},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"25-29","Numeric":45},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"30-34","Numeric":41},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"35-39","Numeric":36},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"40-44","Numeric":32},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"45-49","Numeric":28},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"50-54","Numeric":24},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"55-59","Numeric":20},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"60-64","Numeric":16},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"65-69","Numeric":13},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"70-74","Numeric":10},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"75-79","Numeric":8},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"80-84","Numeric":6},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"85-89","Numeric":5},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"90-94","Numeric":4},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"95-99","Numeric":3},{"WHO.region":"South-East Asia","Sex":"Male","Age.Group":"100+","Numeric":3},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"<1","Numeric":78},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"1-4","Numeric":78},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"5-9","Numeric":74},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"10-14","Numeric":69},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"15-19","Numeric":64},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"20-24","Numeric":60},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"25-29","Numeric":55},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"30-34","Numeric":50},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"35-39","Numeric":45},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"40-44","Numeric":40},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"45-49","Numeric":36},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"50-54","Numeric":31},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"55-59","Numeric":26},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"60-64","Numeric":22},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"65-69","Numeric":18},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"70-74","Numeric":14},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"75-79","Numeric":11},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"80-84","Numeric":8},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"85-89","Numeric":6},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"90-94","Numeric":4},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"95-99","Numeric":3},{"WHO.region":"Western Pacific","Sex":"Female","Age.Group":"100+","Numeric":3},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"<1","Numeric":74},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"1-4","Numeric":74},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"5-9","Numeric":70},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"10-14","Numeric":65},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"15-19","Numeric":60},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"20-24","Numeric":56},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"25-29","Numeric":51},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"30-34","Numeric":46},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"35-39","Numeric":41},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"40-44","Numeric":37},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"45-49","Numeric":32},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"50-54","Numeric":27},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"55-59","Numeric":23},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"60-64","Numeric":19},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"65-69","Numeric":15},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"70-74","Numeric":12},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"75-79","Numeric":9},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"80-84","Numeric":7},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"85-89","Numeric":5},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"90-94","Numeric":3},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"95-99","Numeric":3},{"WHO.region":"Western Pacific","Sex":"Male","Age.Group":"100+","Numeric":2}];
+  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  
+  //function to build axes
+  function buildAxis(position,layer){
+    var axis;
+    var axisopts;
+    if (!layer[position+"Axis"]){
+      axisopts = opts[position+"Axis"];
+    } else axisopts = layer[position+"Axis"];
+    
+    if(axisopts.measure) {
+      axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+    } else {
+      axis = myChart[axisopts.type](position, layer[position]);
+    };
+    if(!(axisopts.type === "addPctAxis")) axis.showPercent = axisopts.showPercent;
+    if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+    if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+    if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+    if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+    return axis;
+  };
+  
+  var c = null;
+  if(d3.keys(opts.colorAxis).length > 0) {
+    c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+  }
+  
+  //allow manipulation of default colors to use with dimple
+  if(opts.defaultColors.length) {
+    opts.defaultColors = opts.defaultColors[0];
+    if (typeof(opts.defaultColors) == "function") {
+      //assume this is a d3 scale
+      //for now loop through first 20 but need a better way to handle
+      defaultColorsArray = [];
+      for (var n=0;n<20;n++) {
+        defaultColorsArray.push(opts.defaultColors(n));
+      };
+      opts.defaultColors = defaultColorsArray;
+    }
+    opts.defaultColors.forEach(function(d,i) {
+      opts.defaultColors[i] = new dimple.color(d);
+    })
+    myChart.defaultColors = opts.defaultColors;
+  }  
+  
+  //do series
+  //set up a function since same for each
+  //as of now we have x,y,groups,data,type in opts for primary layer
+  //and other layers reside in opts.layers
+  function buildSeries(layer, hidden){
+    //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+    if (!layer.xAxis) layer.xAxis = opts.xAxis;    
+    if (!layer.yAxis) layer.yAxis = opts.yAxis;
+    if (!layer.zAxis) layer.zAxis = opts.zAxis;
+    
+    var x = buildAxis("x", layer);
+    x.hidden = hidden;
+    
+    var y = buildAxis("y", layer);
+    y.hidden = hidden;
+    
+    //z for bubbles
+    var z = null;
+    if (!(typeof(layer.zAxis) === 'undefined') && layer.zAxis.type){
+      z = buildAxis("z", layer);
+    };
+    
+    //here think I need to evaluate group and if missing do null
+    //as the group argument
+    //if provided need to use groups from layer
+    var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+    
+    //as of v1.1.4 dimple can use different dataset for each series
+    if(layer.data){
+      //convert to an array of objects
+      //avoid lodash for now
+      datakeys = d3.keys(layer.data)
+      layer.dataarray = layer.data[datakeys[1]].map(function(d,i){
+        var tempobj = {}
+        datakeys.forEach(function(key){
+          tempobj[key] = layer.data[key][i]
+        })
+        return tempobj
+      })
+      s.data = layer.dataarray;
+    }
+    
+    if(layer.hasOwnProperty("groups")) {
+      s.categoryFields = (typeof layer.groups === "object") ? layer.groups : [layer.groups];
+      //series offers an aggregate method that we will also need to check if available
+      //options available are avg, count, max, min, sum
+      if (!(typeof(layer.aggregate) === 'undefined')) {
+        s.aggregate = eval(layer.aggregate);
+      }
+      if (!(typeof(layer.lineWeight) === 'undefined')) {
+        s.lineWeight = eval(layer.lineWeight);
+      }
+      if (!(typeof(layer.barGap) === 'undefined')) {
+        s.barGap = eval(layer.barGap);
+      }    
+    };
+    myChart.series.push(s);
+    
+    /*placeholder fix domain of primary scale for new series data
+    //not working right now but something like this
+    //for now just use overrideMin and overrideMax from rCharts
+    for( var i = 0; i<2; i++) {
+      if (!myChart.axes[i].overrideMin) {
+        myChart.series[0]._axisBounds(i==0?"x":"y").min = myChart.series[0]._axisBounds(i==0?"x":"y").min < s._axisBounds(i==0?"x":"y").min ? myChart.series[0]._axisBounds(i==0?"x":"y").min : s._axisBounds(i==0?"x":"y").min;
+      }
+      if (!myChart.axes[i].overrideMax) {  
+        myChart.series[0]._axisBounds(i==0?"x":"y")._max = myChart.series[0]._axisBounds(i==0?"x":"y").max > s._axisBounds(i==0?"x":"y").max ? myChart.series[0]._axisBounds(i==0?"x":"y").max : s._axisBounds(i==0?"x":"y").max;
+      }
+      myChart.axes[i]._update();
+    }
+    */
+      
+    
+    return s;
+  };
+  
+  buildSeries(opts, false);
+  if (opts.layers.length > 0) {
+    opts.layers.forEach(function(layer){
+      buildSeries(layer, true);
+    })
+  }
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(opts.legend).length > 0) {
+    var l =myChart.addLegend();
+    d3.keys(opts.legend).forEach(function(d){
+      l[d] = opts.legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+</script>
+    
+    
+      <script>
+        myChart.draw()
+        myChart.axes[0].titleShape.text('Age Group')
+        myChart.axes[1].titleShape.text('RLE (years)')
+        myChart.svg.append('text')
+            .attr('x', 0)
+            .attr('y', 20)
+            .text('RLE by Age Group, Region, and Sex')
+            .style('text-anchor','beginning')
+            .style('font-size', '90%')
+            .style('font-family','sans-serif')
+      </script>               
+        
+  </body>
+</html>
